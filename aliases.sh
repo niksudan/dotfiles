@@ -1,9 +1,6 @@
 # Detailed file listing
 alias l='ls -al'
 
-# Go to root quickly
-alias rootdir='cd ~/'
-
 # Reload shell
 alias rl='source ~/.bash_aliases && clear && echo "Shell successfully reloaded"'
 alias reload='rl'
