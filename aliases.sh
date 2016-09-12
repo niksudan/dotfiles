@@ -23,6 +23,12 @@ alias gits='cd ~/Git && clear &&  echo "Choose a repo, or start a new one!" && l
 # Vim
 alias v=vim
 
+# Hosts
+alias hosts='sudo vim /etc/hosts'
+
+# SSH Keys
+alias sshs='cd ~/.ssh'
+
 # Clear console
 alias c='clear && echo "Bang and the dirt is gone!"'
 
