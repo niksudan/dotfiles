@@ -1,0 +1,6 @@
+#!/bin/bash
+# Find and replace all occurences in a file
+
+sed -ie "s/${1}/${2}/g" ${3};
+rm "${3}e";
+echo "Replaced '$1' with '$2' in $3";
