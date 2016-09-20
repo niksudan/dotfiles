@@ -1,0 +1,8 @@
+#!/bin/bash
+# Setup a new ssh connection to a server
+
+keyName='id_rsa'
+sudo -- sh -c -e "echo '$2	$1' >> /etc/hosts";
+sudo -- sh -c -e "echo 'Host $1\n	User root\n	Port 22\n	IdentityFile ~/.ssh/$keyName' >> ~/.ssh/config"
+echo "SSH connection settings added for '$1'"
+echo "To connect and add the IP to your known hosts, run 'ssh $1'"
