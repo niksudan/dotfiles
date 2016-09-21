@@ -29,6 +29,9 @@ alias .....="cd ../../../.."
 # Jump to repos
 alias gits='cd ~/Git'
 
+# Jump to scripts
+alias scripts='cd ~/Scripts'
+
 # Generate new ssh connection
 conn() {
 ~/Scripts/conn "$@"
@@ -42,7 +45,12 @@ replace() {
 ~/Scripts/replace "$@"
 }
 
-# Copy to clipboard
+# Copy file to clipboard
 copy() {
-cat $1 | pbcopy
+cat $1 | pbcopy && echo "Copied contents of ${1} to clipboard"
+}
+
+# Create a Wordpress .htaccess
+wphtaccess() {
+~/Scripts/wphtaccess "$@"
 }
