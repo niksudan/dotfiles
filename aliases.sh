@@ -51,6 +51,11 @@ cat $1 | pbcopy && echo "Copied contents of ${1} to clipboard"
 }
 
 # Create a Wordpress .htaccess
-wphtaccess() {
-~/Scripts/wphtaccess "$@"
+wpht() {
+~/Scripts/wpht "$@"
+}
+
+# Create a Wordpress .htaccess for local uploads
+wphtup() {
+~/Scripts/wphtup "$@"
 }
