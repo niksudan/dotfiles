@@ -1,3 +1,5 @@
 # dotfiles
 
-`git clone https://github.com/niksudan/dotfiles.git ./bin`
+```sh
+git clone https://github.com/niksudan/dotfiles.git ./bin
+```
