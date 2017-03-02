@@ -70,6 +70,9 @@ copy() {
   cat $1 | pbcopy && echo "Copied contents of ${1} to clipboard"
 }
 
+# Copy a lorem ipsum paragraph to clipboard
+alias lorem='lorem-ipsum 1 paragraph --copy'
+
 # ------------------
 # Editors
 
