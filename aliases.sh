@@ -168,3 +168,8 @@ wphtup() {
 </IfModule>" > ./wp-content/uploads/.htaccess
   echo "Created .htaccess file for Wordpress uploads on '${1}/wp-content/uploads/'"
 }
+
+# ------------------
+# Extras
+
+source ~/aliases/extras.sh
