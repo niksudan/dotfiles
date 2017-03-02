@@ -136,6 +136,9 @@ indent_size = 2" > ./.editorconfig
   echo "Created .editorconfig"
 }
 
+# Yarn shorthand
+alias y='yarn'
+
 # Clean out a yarn.lock
 alias yarnc='rm -rf yarn.lock && rm -rf node_modules && yarn install'
 
