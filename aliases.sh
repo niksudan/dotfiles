@@ -1,7 +1,9 @@
 # ------------------
 # BASH ALIASES
 # https://github.com/niksudan/aliases
-# This assumes you are using ~/.bash_aliases
+# 
+# Add `source ~/aliases/aliases.sh` to your main file
+# Add any additional, private aliases in extra.sh
 
 # ------------------
 # Aliases
@@ -10,7 +12,21 @@
 alias a='vim ~/aliases/aliases.sh'
 
 # Reload shell
-alias rl='source ~/.bash_aliases && echo "Reloaded aliases"'
+alias rl='source ~/aliases/aliases.sh && echo "Reloaded aliases"'
+
+# ------------------
+# Paths
+
+# Android SDK
+export ANDROID_HOME=/Users/nik/Library/Android/sdk
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+export PATH=$ANDROID_HOME/tools:$PATH
+
+# Java JDK
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home
+
+# MAMP
+export PATH=/Applications/MAMP/bin/php/php7.0.10/bin:$PATH
 
 # ------------------
 # Files
@@ -55,7 +71,7 @@ copy() {
 }
 
 # ------------------
-# Vim
+# Editors
 
 # Set $EDITOR
 export EDITOR='/usr/bin/vim'
@@ -110,9 +126,6 @@ alias prunetags='git fetch --prune origin +refs/tags/*:refs/tags/*'
 # Composer
 alias composer='php /usr/local/bin/composer.phar'
 
-# Clean out a yarn.lock
-alias yarnc='rm -rf yarn.lock && rm -rf node_modules && yarn install'
-
 # Editorconfig
 editorconfig() {
   echo "root = true
@@ -122,6 +135,9 @@ indent_style = space
 indent_size = 2" > ./.editorconfig
   echo "Created .editorconfig"
 }
+
+# Clean out a yarn.lock
+alias yarnc='rm -rf yarn.lock && rm -rf node_modules && yarn install'
 
 # ------------------
 # WordPress
@@ -152,17 +168,3 @@ wphtup() {
 </IfModule>" > ./wp-content/uploads/.htaccess
   echo "Created .htaccess file for Wordpress uploads on '${1}/wp-content/uploads/'"
 }
-
-# ------------------
-# Paths
-
-# Android SDK
-export ANDROID_HOME=/Users/nik/Library/Android/sdk
-export PATH=$ANDROID_HOME/platform-tools:$PATH
-export PATH=$ANDROID_HOME/tools:$PATH
-
-# Java JDK
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home
-
-# MAMP
-export PATH=/Applications/MAMP/bin/php/php7.0.10/bin:$PATH
