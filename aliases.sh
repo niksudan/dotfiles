@@ -83,6 +83,9 @@ export EDITOR='/usr/bin/vim'
 alias v=vim
 alias vi=vim
 
+# VSCode alias
+code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+
 # ------------------
 # Hosts
 
