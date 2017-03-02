@@ -14,6 +14,9 @@ alias a='vim ~/aliases/aliases.sh'
 # Reload shell
 alias rl='source ~/aliases/aliases.sh && echo "Reloaded aliases"'
 
+# https://github.com/nvbn/thefuck
+eval $(thefuck --alias)
+
 # ------------------
 # Paths
 
