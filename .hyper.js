@@ -1,6 +1,7 @@
 module.exports = {
   config: {
     fontFamily: 'FiraCode-Regular, monospace',
+    fontSize: '12',
     termCSS: 'x-screen x-row { font-variant-ligatures: contextual; }',
     padding: '12px 14px',
     backgroundColor: 'rgba(40, 42, 54, 0.5)',
@@ -29,12 +30,9 @@ module.exports = {
     bellSoundURL: 'https://dl.dropboxusercontent.com/u/53826881/Notification.wav'
   },
   plugins: [
+    'hyper-snazzy',
     'hyper-hide-title',
     'hypercwd',
     'hyper-statusline',
   ],
-  localPlugins: [
-    './hyper-vibrancy',
-    './hyper-snazzy'
-  ]
 };
