@@ -62,6 +62,9 @@ alias .....="cd ../../../.."
 # Output all directories over 1GB
 alias d1g="du -h / | grep '[0-9]G'"
 
+# Colourised 'cat'
+alias cat='ccat'
+
 # ------------------
 # Strings
 
