@@ -31,6 +31,10 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Hom
 # MAMP
 export PATH=/Applications/MAMP/bin/php/php7.0.10/bin:$PATH
 
+# NVM
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 # ------------------
 # Files
 
@@ -88,6 +92,18 @@ alias vi=vim
 
 # VSCode alias
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+
+# -----------------
+# Terminal
+
+# ZSH config
+alias zsh='vi ~/.zshrc'
+
+# User
+DEFAULT_USER="nik"
+
+# Hyperterm config
+alias hyper='vi ~/.hyper.js'
 
 # ------------------
 # Hosts
@@ -154,6 +170,9 @@ alias yarnc='rm -rf yarn.lock && rm -rf node_modules && yarn install'
 # Open GitKraken
 kraken () { open -n -b "com.axosoft.gitkraken"; }
 
+# List global NPM packages
+alias npmls='npm list -g --depth=0'
+
 # ------------------
 # WordPress
 
@@ -183,6 +202,14 @@ wphtup() {
 </IfModule>" > ./wp-content/uploads/.htaccess
   echo "Created .htaccess file for Wordpress uploads on '${1}/wp-content/uploads/'"
 }
+
+# -----------------
+# Music
+
+alias s='spotify'
+alias nowplaying='s i'
+alias np='nowplaying'
+alias playing='nowplaying'
 
 # ------------------
 # Extras
