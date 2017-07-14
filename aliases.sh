@@ -114,9 +114,19 @@ alias hyper='vi ~/.hyper.js'
 # Quickly edit hosts
 alias hosts='sudo vim /etc/hosts'
 
-# Search for a host entry
+# Get a domain's IP address
 ip() {
-  cat /etc/hosts | grep "$1"
+  dig +short "$*"
+}
+
+# Search for a host entry
+host() {
+  cat /etc/hosts | grep "$*"
+}
+
+# Search if a domain's IP address is a host entry
+iphost() {
+  host "$(ip $*)"
 }
 
 # ------------------
