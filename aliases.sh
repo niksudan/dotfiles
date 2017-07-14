@@ -34,6 +34,7 @@ export PATH=/Applications/MAMP/bin/php/php7.0.10/bin:$PATH
 # NVM
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+nvm use 8.1.2
 
 # ------------------
 # Files
