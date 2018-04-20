@@ -14,9 +14,6 @@ alias a='vim ~/aliases/aliases.sh'
 # Reload shell
 alias rl='source ~/aliases/aliases.sh && echo "Reloaded aliases"'
 
-# https://github.com/nvbn/thefuck
-eval $(thefuck --alias)
-
 # ------------------
 # Paths
 
@@ -29,12 +26,15 @@ export PATH=$ANDROID_HOME/tools:$PATH
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home
 
 # MAMP
-export PATH=/Applications/MAMP/bin/php/php7.0.10/bin:$PATH
+# export PATH=/Applications/MAMP/bin/php/php7.0.10/bin:$PATH
 
 # NVM
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 nvm use 8.1.2
+
+# PHP
+export PATH=/usr/local/php5/bin:$PATH
 
 # ------------------
 # Files
@@ -62,6 +62,9 @@ alias .....="cd ../../../.."
 
 # Output all directories over 1GB
 alias d1g="du -h / | grep '[0-9]G'"
+size() {
+  du -sk * | awk '$1 > 1000' | sort -nr;
+}
 
 # Colourised 'cat'
 alias cat='ccat'
@@ -159,6 +162,9 @@ gitlog() {
 # Remove local tags
 alias prunetags='git fetch --prune origin +refs/tags/*:refs/tags/*'
 
+# lolcommits camera warmup delay
+export LOLCOMMITS_DELAY=1
+
 # ------------------
 # Project management
 
@@ -186,6 +192,9 @@ kraken () { open -n -b "com.axosoft.gitkraken"; }
 
 # List global NPM packages
 alias npmls='npm list -g --depth=0'
+
+# Start a PHP development server
+alias phpdev='php -S localhost:8000'
 
 # ------------------
 # WordPress
