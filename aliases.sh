@@ -36,6 +36,20 @@ nvm use 8.1.2
 # PHP
 export PATH=/usr/local/php5/bin:$PATH
 
+# Switch to PHP 5.6
+php5() {
+  sudo rm -rf /usr/local/php5
+  sudo ln -s /usr/local/php5-5.6.33-20180201-140154 /usr/local/php5
+  php -v
+}
+
+# Switch to PHP 7.0
+php7() {
+  sudo rm -rf /usr/local/php5
+  sudo ln -s /usr/local/php5-7.0.27-20180201-135220 /usr/local/php5
+  php -v
+}
+
 # ------------------
 # Files
 
