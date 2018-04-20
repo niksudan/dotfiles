@@ -51,3 +51,29 @@
 - Spotify Notifications
 - REAPER
 - Garageband
+
+## Command Line Tools
+
+### Core
+
+- composer
+- docker
+- nvm
+- oh-my-zsh
+- php
+- yarn
+
+### NVM
+
+- node
+- npm
+
+### NPM
+
+- bower
+- browser-sync
+- http-server
+- now
+- pm2
+- prettier
+- yo
