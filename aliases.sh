@@ -1,9 +1,8 @@
 # ------------------
 # BASH ALIASES
-# https://github.com/niksudan/aliases
 # 
 # Add `source ~/aliases/aliases.sh` to your main file
-# Add any additional, private aliases in extra.sh
+# Add any additional, private aliases in `extras.sh`
 
 # ------------------
 # Aliases
