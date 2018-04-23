@@ -61,12 +61,13 @@
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 - [composer](https://gist.github.com/vinnizworld/6896317)
-- php
+- [php](https://php-osx.liip.ch/)
 - yarn
 
 ### Brew Installs
 
 - nvm (node, npm)
+- mysql
 
 ### NPM Installs
 
