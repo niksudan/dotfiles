@@ -6,7 +6,6 @@
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Hyper](https://hyper.is/)
-- [FiraCode](https://github.com/tonsky/FiraCode)
 - GitKraken
 - Sequel Pro
 - Postman
@@ -34,11 +33,17 @@
 - Alfred (💰)
 - 1Password (💰)
 - Rocket
-- Unsplash Wallpapers
 - Gifox
 - CCleaner
 - PiPifier
 - Screaming Frog SEO Spider
+
+### Decorative
+
+- [FiraCode](https://github.com/tonsky/FiraCode)
+- [EmojiOne](https://github.com/emojione/emojione)
+- [Aerial](https://github.com/JohnCoates/Aerial)
+- Unsplash Wallpapers
 
 ### 🎨 Design
 
