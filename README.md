@@ -62,7 +62,7 @@
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 - [composer](https://gist.github.com/vinnizworld/6896317)
 - [php](https://php-osx.liip.ch/)
-- yarn
+- [yarn](https://yarnpkg.com/lang/en/)
 
 ### Brew Installs
 
