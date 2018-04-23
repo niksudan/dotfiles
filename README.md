@@ -38,7 +38,7 @@
 - PiPifier
 - Screaming Frog SEO Spider
 
-### Decorative
+### ⛰ Decorative
 
 - [FiraCode](https://github.com/tonsky/FiraCode)
 - [EmojiOne](https://github.com/emojione/emojione)
