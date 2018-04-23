@@ -64,7 +64,7 @@
 - php
 - yarn
 
-### Brew Installs
+### Brew Installs
 
 - nvm (node, npm)
 
