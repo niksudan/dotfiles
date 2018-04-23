@@ -67,13 +67,14 @@
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 - [composer](https://gist.github.com/vinnizworld/6896317)
 - [php](https://php-osx.liip.ch/)
-
+- [ccat](https://github.com/jingweno/ccat)
 
 ### Brew Installs
 
 - nvm (node, npm)
 - mysql
 - [yarn --without-node](https://yarnpkg.com/lang/en/)
+- go
 
 ### NPM Installs
 
