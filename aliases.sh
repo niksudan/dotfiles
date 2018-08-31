@@ -54,12 +54,16 @@ php7() {
 
 # Jump to desktop
 alias desktop='cd ~/Desktop'
+alias desk='cd ~/Desktop'
 
 # Jump to documents
 alias documents='cd ~/Documents'
+alias docs='cd ~/Documents'
 
 # Jump to downloads
 alias downloads='cd ~/Downloads'
+alias dls='cd ~/Downloads'
+alias dl='cd ~/Downloads'
 
 # Detailed file listing
 alias l='ls -alh'
@@ -126,7 +130,7 @@ DEFAULT_USER="nik"
 alias hyper='vi ~/.hyper.js'
 
 # ------------------
-# Hosts
+# Hosts and Ports
 
 # Quickly edit hosts
 alias hosts='sudo vim /etc/hosts'
@@ -144,6 +148,11 @@ host() {
 # Search if a domain's IP address is a host entry
 iphost() {
   host "$(ip $*)"
+}
+
+# Kill a process on a port
+killport() {
+  lsof -i tcp:$1 | awk 'NR!=1 {print $2}' | xargs kill
 }
 
 # ------------------
@@ -165,7 +174,7 @@ conn() {
 # Git
 
 # Jump to repos
-alias gits='cd ~/Git'
+alias gits='cd ~/dev'
 
 # Log a repository's commits for a certain day
 gitlog() {
@@ -175,14 +184,11 @@ gitlog() {
 # Remove local tags
 alias prunetags='git fetch --prune origin +refs/tags/*:refs/tags/*'
 
-# lolcommits camera warmup delay
-export LOLCOMMITS_DELAY=1
-
 # ------------------
 # Project management
 
 # Composer
-alias composer='php /usr/local/bin/composer.phar'
+alias composer='php /usr/local/bin/composer'
 
 # Editorconfig
 editorconfig() {
@@ -238,14 +244,6 @@ wphtup() {
 </IfModule>" > ./wp-content/uploads/.htaccess
   echo "Created .htaccess file for Wordpress uploads on '${1}/wp-content/uploads/'"
 }
-
-# -----------------
-# Music
-
-alias s='spotify'
-alias nowplaying='s i'
-alias np='nowplaying'
-alias playing='nowplaying'
 
 # ------------------
 # Extras
