@@ -30,7 +30,6 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Hom
 # NVM
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
-nvm use 8.1.2
 
 # PHP
 export PATH=/usr/local/php5/bin:$PATH
@@ -46,6 +45,13 @@ php5() {
 php7() {
   sudo rm -rf /usr/local/php5
   sudo ln -s /usr/local/php5-7.0.27-20180201-135220 /usr/local/php5
+  php -v
+}
+
+# Switch to PHP 7.2
+php72() {
+  sudo rm -rf /usr/local/php5
+  sudo ln -s /usr/local/php5-7.2.9-20180821-074958 /usr/local/php5
   php -v
 }
 
@@ -86,6 +92,13 @@ size() {
 # Colourised 'cat'
 alias cat='ccat'
 
+# Convert video to gif
+video2gif() {
+  ffmpeg -y -i "${1}" -vf fps=${3:-10},scale=${2:-320}:-1:flags=lanczos,palettegen "${1}.png"
+  ffmpeg -i "${1}" -i "${1}.png" -filter_complex "fps=${3:-10},scale=${2:-320}:-1:flags=lanczos[x];[x][1:v]paletteuse" "${1}".gif
+  rm "${1}.png"
+}
+
 # ------------------
 # Strings
 
@@ -103,6 +116,13 @@ copy() {
 
 # Copy a lorem ipsum paragraph to clipboard
 alias lorem='lorem-ipsum 1 paragraph --copy'
+
+# utf8 collation conversion
+utf8convert() {
+  replace 'utf8mb4' 'utf8' ${1};
+  replace 'utf8mb4_unicode_ci' 'utf8_general_ci' ${1};
+  replace 'utf8_unicode_520_ci' 'utf8_general_ci' ${1};
+}
 
 # ------------------
 # Editors
@@ -245,7 +265,19 @@ wphtup() {
   echo "Created .htaccess file for Wordpress uploads on '${1}/wp-content/uploads/'"
 }
 
+# Create a new WordPress website in the current directory
+# @param dbname
+# @param username
+# @param password
+# @parma email
+wordpress() {
+  wp core download
+  wp core config --dbname="${1}" --dbuser="root" --dbpass="root"
+  wp core install --url="http://localhost:8000" --title="WordPress" --admin_user="${2}" --admin_password="${3}" --admin_email="${4}"
+}
+
 # ------------------
 # Extras
 
 source ~/aliases/extras.sh
+
