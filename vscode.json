@@ -7,7 +7,7 @@
   "workbench.editor.showTabs": false,
   "window.restoreFullscreen": true,
   "terminal.external.osxExec": "Hyper.app",
-  "workbench.colorTheme": "One Dark Pro",
+  "workbench.colorTheme": "Forge",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorCustomizations": {
     "terminal.foreground": "#eff0eb",
