@@ -6,8 +6,8 @@
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Hyper](https://hyper.is/)
-- GitKraken
-- Sequel Pro
+- [GitKraken](https://www.gitkraken.com/)
+- [Sequel Pro](https://www.sequelpro.com/)
 - Postman
 - Xcode
 - Android Studio
@@ -24,7 +24,6 @@
 
 - Spark
 - Slack
-- Fantastical 2 (💰)
 - Evernote
 - Discord
 
@@ -32,8 +31,8 @@
 
 - Alfred (💰)
 - 1Password (💰)
-- Rocket
-- Gifox
+- [Rocket](https://matthewpalmer.net/rocket/)
+- [Kap](https://getkap.co/)
 - CCleaner
 - PiPifier
 - Screaming Frog SEO Spider
@@ -54,7 +53,6 @@
 ### 🎧 Audio
 
 - Spotify (💰)
-- Spotify Notifications
 - REAPER
 - Garageband
 
@@ -86,3 +84,4 @@
 - pm2
 - prettier
 - yo
+- lorem-ipsum
