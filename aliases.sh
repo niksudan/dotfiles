@@ -8,24 +8,23 @@
 # Aliases
 
 # Quick alias editing
-alias a='vim ~/aliases/aliases.sh'
+alias a='vim ~/.aliases'
 
 # Reload shell
-alias rl='source ~/aliases/aliases.sh && echo "Reloaded aliases"'
+alias rl='source ~/.aliases && echo "Reloaded aliases"'
 
 # ------------------
 # Paths
 
 # Android SDK
-export ANDROID_HOME=/Users/nik/Library/Android/sdk
-export PATH=$ANDROID_HOME/platform-tools:$PATH
-export PATH=$ANDROID_HOME/tools:$PATH
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Java JDK
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home
-
-# MAMP
-# export PATH=/Applications/MAMP/bin/php/php7.0.10/bin:$PATH
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home
 
 # NVM
 export NVM_DIR=~/.nvm
@@ -84,7 +83,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 # Output all directories over 1GB
-alias d1g="du -h / | grep '[0-9]G'"
+alias d1g="du -h / | grep '[0-9]G '"
 size() {
   du -sk * | awk '$1 > 1000' | sort -nr;
 }
@@ -122,6 +121,8 @@ utf8convert() {
   replace 'utf8mb4' 'utf8' ${1};
   replace 'utf8mb4_unicode_ci' 'utf8_general_ci' ${1};
   replace 'utf8_unicode_520_ci' 'utf8_general_ci' ${1};
+  replace 'utf8mb4_0900_ai_ci' 'utf8_general_ci' ${1};
+  replace 'utf8_0900_ai_ci' 'utf8_general_ci' ${1};
 }
 
 # ------------------
@@ -204,6 +205,15 @@ gitlog() {
 # Remove local tags
 alias prunetags='git fetch --prune origin +refs/tags/*:refs/tags/*'
 
+# Reset a repository completely
+gitreset() {
+  rm -rf .git
+  git init
+  git remote add origin ${1}
+  git fetch
+  git reset --hard origin/master
+}
+
 # ------------------
 # Project management
 
@@ -279,5 +289,5 @@ wordpress() {
 # ------------------
 # Extras
 
-source ~/aliases/extras.sh
+source ~/.aliases-extras
 
