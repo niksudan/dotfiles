@@ -106,13 +106,6 @@
   "javascript.implicitProjectConfig.checkJs": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "cSpell.showStatus": false,
-  "bracketPairColorizer.consecutivePairColors": [
-    "()",
-    "[]",
-    "{}",
-    ["#92D6F4", "#FFC166", "#F47A97", "#9F9FA6"],
-    "#EA7F6A"
-  ],
   "javascript.validate.enable": false,
   "diffEditor.renderSideBySide": true,
   "breadcrumbs.enabled": true,
