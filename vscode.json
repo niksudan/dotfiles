@@ -43,7 +43,6 @@
     "**/artisan": true,
     "**/bower_components": true,
     "**/cache": true,
-    "**/CHANGELOG.md": true,
     "**/composer.lock": true,
     "**/coverage": true,
     "**/dist": false,
